@@ -17,7 +17,6 @@ namespace IS_prueba_tecnica.Controllers
         public InfringementsController(ILogger<InfringementsController> logger)
         {
             _logger = logger;
-
         }
 
         [HttpPost]
@@ -38,5 +37,7 @@ namespace IS_prueba_tecnica.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError);
             }
         }
+
+
     }
 }
