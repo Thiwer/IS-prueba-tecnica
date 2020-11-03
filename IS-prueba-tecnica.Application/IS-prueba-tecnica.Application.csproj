@@ -5,4 +5,18 @@
     <RootNamespace>IS_prueba_tecnica.Application</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.9" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Common\Exceptions\" />
+    <Folder Include="Vehicles\Commands\" />
+    <Folder Include="Vehicles\Queries\" />
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
 </Project>
