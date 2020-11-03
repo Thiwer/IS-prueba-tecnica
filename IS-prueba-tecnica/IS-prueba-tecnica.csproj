@@ -9,5 +9,10 @@
     <PackageReference Include="MediatR" Version="9.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\IS-prueba-tecnica.Application\IS-prueba-tecnica.Application.csproj" />
+    <ProjectReference Include="..\IS-prueba-tecnica.Infrastructure\IS-prueba-tecnica.Infrastructure.csproj" />
+  </ItemGroup>
+
 
 </Project>
