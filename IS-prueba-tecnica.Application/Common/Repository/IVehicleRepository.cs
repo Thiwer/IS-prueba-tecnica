@@ -1,4 +1,5 @@
 ﻿using IS_prueba_tecnica.Application.Common.Repository.Interfaces;
+using IS_prueba_tecnica.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
