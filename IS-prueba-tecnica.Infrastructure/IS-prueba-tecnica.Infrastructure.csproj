@@ -5,4 +5,13 @@
     <RootNamespace>IS_prueba_tecnica.Infrastructure</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\IS-prueba-tecnica.Application\IS-prueba-tecnica.Application.csproj" />
+    <ProjectReference Include="..\IS-prueba-tecnica.Domain\IS-prueba-tecnica.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Persistence\Migrations\" />
+  </ItemGroup>
+
 </Project>

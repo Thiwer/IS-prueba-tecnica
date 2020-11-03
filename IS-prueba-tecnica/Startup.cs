@@ -1,4 +1,5 @@
 using IS_prueba_tecnica.Application;
+using IS_prueba_tecnica.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -20,6 +21,7 @@ namespace IS_prueba_tecnica
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddApplication();
+            services.AddInfrastructure(Configuration);
 
             services.AddControllers();
         }

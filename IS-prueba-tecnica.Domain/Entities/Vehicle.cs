@@ -10,10 +10,6 @@ namespace IS_prueba_tecnica.Domain.Entities
         public string Brand { get; set; }
         public string Model { get; set; }
 
-        public string DniOwner { get; set; }
-
-        public Driver Driver { get; set; }
-
         public ICollection<Driver> Drivers { get; private set; }
 
         public Vehicle()
