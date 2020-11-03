@@ -1,15 +1,11 @@
 ﻿using IS_prueba_tecnica.Application.Common.Interfaces;
 using IS_prueba_tecnica.Application.Common.Repository;
 using IS_prueba_tecnica.Application.Common.UnitOfWork;
-using IS_prueba_tecnica.Domain.Entities;
 using IS_prueba_tecnica.Infrastructure.Persistence;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace IS_prueba_tecnica.Infrastructure.UnitOfWork
 {
-    public class UnitOfWorkContainer: IUnitOfWork
+    public class UnitOfWorkContainer : IUnitOfWork
     {
         private readonly PruebaTecnicaDbContext _context;
 

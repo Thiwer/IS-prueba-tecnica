@@ -2,11 +2,8 @@
 using IS_prueba_tecnica.Domain.Common;
 using IS_prueba_tecnica.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.Data.Common;
 using System.Reflection;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 

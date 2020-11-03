@@ -2,9 +2,6 @@
 using IS_prueba_tecnica.Application.Common.UnitOfWork;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace IS_prueba_tecnica.Infrastructure
 {

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System;
+using System.Threading.Tasks;
 
 namespace IS_prueba_tecnica.Controllers
 {
@@ -28,7 +25,7 @@ namespace IS_prueba_tecnica.Controllers
                 var result = await Mediator.Send(request);
                 return Ok(result);
             }
-            catch (DriverExistsException drex)
+            catch (DriverExistsException)
             {
                 return BadRequest($"The driver with DNI '{request.DNI}' already exists.");
             }

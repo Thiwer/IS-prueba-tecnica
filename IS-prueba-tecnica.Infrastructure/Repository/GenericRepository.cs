@@ -1,10 +1,8 @@
 ﻿using IS_prueba_tecnica.Application.Common.Interfaces;
 using Microsoft.EntityFrameworkCore.Query;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 
 namespace IS_prueba_tecnica.Infrastructure.Repository
 {

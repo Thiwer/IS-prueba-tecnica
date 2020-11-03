@@ -1,9 +1,6 @@
 ﻿using IS_prueba_tecnica.Application.Common.Interfaces;
 using IS_prueba_tecnica.Application.Common.Repository;
 using Microsoft.EntityFrameworkCore.Storage;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 

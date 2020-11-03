@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System;
+using System.Threading.Tasks;
 
 namespace IS_prueba_tecnica.Controllers
 {
@@ -28,15 +26,15 @@ namespace IS_prueba_tecnica.Controllers
                 var result = await Mediator.Send(request);
                 return Ok(result);
             }
-            catch (VehicleExistsException veex)
+            catch (VehicleExistsException)
             {
                 return BadRequest($"The vehicle with Matrícula '{request.Matricula}' already exists.");
             }
-            catch (DriverNotExistsException dneex)
+            catch (DriverNotExistsException)
             {
                 return BadRequest($"The driver with DNI '{request.DNI}' does not exists.");
             }
-            catch (VehiclesLimitException vlex)
+            catch (VehiclesLimitException)
             {
                 return BadRequest($"The driver with DNI '{request.DNI}' cannot have more vehicles");
             }
@@ -55,11 +53,11 @@ namespace IS_prueba_tecnica.Controllers
                 var result = await Mediator.Send(request);
                 return Ok(result);
             }
-            catch (VehicleNotExistsException vneex)
+            catch (VehicleNotExistsException)
             {
                 return BadRequest($"The vehicle with Matrícula '{request.Matricula}' does not exists.");
             }
-            catch (InfringementNotExistsException ineex)
+            catch (InfringementNotExistsException)
             {
                 return BadRequest($"The Infringement with Id '{request.Id}' does not exists.");
             }

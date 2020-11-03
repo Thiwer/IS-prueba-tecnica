@@ -1,7 +1,5 @@
 ﻿using IS_prueba_tecnica.Application.Common.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace IS_prueba_tecnica.Infrastructure.Services
 {
