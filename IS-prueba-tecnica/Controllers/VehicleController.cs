@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using IS_prueba_tecnica.Application.Common.Exceptions;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;

@@ -2,6 +2,10 @@
 using IS_prueba_tecnica.Application.Common.Repository;
 using IS_prueba_tecnica.Application.Common.UnitOfWork;
 using IS_prueba_tecnica.Infrastructure.Persistence;
+using IS_prueba_tecnica.Infrastructure.Repository;
+using Microsoft.EntityFrameworkCore.Storage;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace IS_prueba_tecnica.Infrastructure.UnitOfWork
 {
