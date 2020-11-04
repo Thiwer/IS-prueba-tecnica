@@ -17,13 +17,16 @@ namespace IS_prueba_tecnica.Infrastructure.UnitOfWork
 
 
         public IVehicleRepository VehicleRepository { get; }
-
+        public IDriverRepository DriverRepository { get; }
+        public IInfringementRepository InfringementRepository { get; }
 
         public UnitOfWorkContainer(PruebaTecnicaDbContext context)
         {
             _context = context;
 
             VehicleRepository = new VehicleRepository(context);
+            DriverRepository = new DriverRepository(context);
+            InfringementRepository = new InfringementRepository(context);
         }
 
         public void DetectChanges()

@@ -11,6 +11,8 @@ namespace IS_prueba_tecnica.Application.Common.UnitOfWork
         IPruebaTecnicaDbContext Context { get; }
 
         IVehicleRepository VehicleRepository { get; }
+        IDriverRepository DriverRepository { get; }
+        IInfringementRepository InfringementRepository { get; }
 
         void DetectChanges();
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken());

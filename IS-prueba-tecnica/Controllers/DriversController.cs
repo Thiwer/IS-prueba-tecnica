@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using IS_prueba_tecnica.Application.Common.Exceptions;
+using IS_prueba_tecnica.Application.Drivers.Commands.CreateDriver;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -27,7 +29,7 @@ namespace IS_prueba_tecnica.Controllers
             }
             catch (DriverExistsException)
             {
-                return BadRequest($"The driver with DNI '{request.DNI}' already exists.");
+                return BadRequest($"The driver with DNI '{request.Dni}' already exists.");
             }
             catch (Exception ex)
             {

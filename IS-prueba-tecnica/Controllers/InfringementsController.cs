@@ -1,4 +1,5 @@
 ﻿using IS_prueba_tecnica.Application.Common.Exceptions;
+using IS_prueba_tecnica.Application.Infringements.Commands.CreateInfringement;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
