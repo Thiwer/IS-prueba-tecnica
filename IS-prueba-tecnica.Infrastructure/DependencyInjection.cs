@@ -4,7 +4,6 @@ using IS_prueba_tecnica.Infrastructure.Persistence;
 using IS_prueba_tecnica.Infrastructure.Services;
 using IS_prueba_tecnica.Infrastructure.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
