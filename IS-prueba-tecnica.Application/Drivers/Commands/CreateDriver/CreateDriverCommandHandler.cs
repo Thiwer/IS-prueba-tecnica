@@ -2,9 +2,6 @@
 using IS_prueba_tecnica.Application.Common.UnitOfWork;
 using IS_prueba_tecnica.Domain.Entities;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
