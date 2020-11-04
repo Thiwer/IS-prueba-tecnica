@@ -1,18 +1,19 @@
-﻿using System.Collections.Generic;
+﻿using IS_prueba_tecnica.Domain.Common;
+using System.Collections.Generic;
 
 namespace IS_prueba_tecnica.Domain.Entities
 {
-    public class Vehicle
+    public class Vehicle : AuditableEntity
     {
         public string Matricula { get; set; }
         public string Brand { get; set; }
         public string Model { get; set; }
 
-        public ICollection<Driver> Drivers { get; private set; }
+        public ICollection<VehicleDriver> VehicleDrivers { get; private set; }
 
         public Vehicle()
         {
-            Drivers = new HashSet<Driver>();
+            VehicleDrivers = new HashSet<VehicleDriver>();
         }
     }
 }

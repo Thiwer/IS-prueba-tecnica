@@ -47,6 +47,6 @@ namespace IS_prueba_tecnica.Infrastructure.Persistence
             base.OnModelCreating(modelBuilder);
         }
 
-        public DbConnection GetDbConnection() => this.Database.GetDbConnection();
+        public DbConnection GetDbConnection() => Database.GetDbConnection();
     }
 }
