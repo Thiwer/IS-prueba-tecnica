@@ -20,7 +20,6 @@ namespace IS_prueba_tecnica.Application.Infringements.Commands.CreateInfringemen
         {
             try
             {
-                await _uow.BeginTransactionAsync();
 
                 var infringement = await _uow.InfringementRepository.FirstOrDefaultAsync(i => i.Id == request.Id);
                 if (infringement != null)
@@ -37,12 +36,10 @@ namespace IS_prueba_tecnica.Application.Infringements.Commands.CreateInfringemen
                 await _uow.InfringementRepository.AddAsync(infringement);
                 await _uow.SaveChangesAsync();
 
-                _uow.CommitTransaction();
                 return infringement.Id;
             }
             catch
             {
-                _uow.RollbackTransaction();
                 throw;
             }
         }

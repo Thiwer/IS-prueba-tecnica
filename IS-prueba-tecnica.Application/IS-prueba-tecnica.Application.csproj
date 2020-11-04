@@ -13,10 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModels\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\IS-prueba-tecnica.Domain\IS-prueba-tecnica.Domain.csproj" />
   </ItemGroup>
 

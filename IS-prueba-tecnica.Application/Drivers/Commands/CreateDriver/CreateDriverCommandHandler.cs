@@ -20,7 +20,6 @@ namespace IS_prueba_tecnica.Application.Drivers.Commands.CreateDriver
         {
             try
             {
-                await _uow.BeginTransactionAsync();
 
                 var driver = await _uow.DriverRepository.FirstOrDefaultAsync(d => d.Dni == request.Dni);
                 if (driver != null)
@@ -38,12 +37,10 @@ namespace IS_prueba_tecnica.Application.Drivers.Commands.CreateDriver
                 await _uow.DriverRepository.AddAsync(driver);
                 await _uow.SaveChangesAsync();
 
-                _uow.CommitTransaction();
                 return driver.Dni;
             }
             catch
             {
-                _uow.RollbackTransaction();
                 throw;
             }
         }

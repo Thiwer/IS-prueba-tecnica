@@ -20,7 +20,6 @@ namespace IS_prueba_tecnica.Application.Vehicles.Commands.CreateVehicle
         {
             try
             {
-                await _uow.BeginTransactionAsync();
 
                 // Check vehicle not exists
                 var vehicle = await _uow.VehicleRepository.FirstOrDefaultAsync(v => v.Matricula == request.Matricula);
@@ -71,12 +70,10 @@ namespace IS_prueba_tecnica.Application.Vehicles.Commands.CreateVehicle
                 await _uow.VehicleDriverRepository.AddAsync(vehicleDriver);
                 await _uow.SaveChangesAsync();
 
-                _uow.CommitTransaction();
                 return vehicle.Matricula;
             }
             catch
             {
-                _uow.RollbackTransaction();
                 throw;
             }
         }

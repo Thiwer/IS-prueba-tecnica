@@ -48,11 +48,12 @@ namespace IS_prueba_tecnica.Controllers
             }
         }
 
-        [HttpPost("infringement/{vehicleMatricula}/{infringementId}")]
-        public async Task<IActionResult> RegisterInfringementToVehicle(string vehicleMatricula, int infringement, RegisterInfringementCommand request)
+        [HttpPost("infringement/{vehicleMatricula}")]
+        public async Task<IActionResult> RegisterInfringementToVehicle(string vehicleMatricula, RegisterInfringementCommand request)
         {
             try
             {
+                request.Matricula = vehicleMatricula;
                 var result = await Mediator.Send(request);
                 return Ok(result);
             }

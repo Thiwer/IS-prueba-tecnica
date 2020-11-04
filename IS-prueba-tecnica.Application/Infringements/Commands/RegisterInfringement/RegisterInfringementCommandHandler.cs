@@ -22,7 +22,6 @@ namespace IS_prueba_tecnica.Application.Infringements.Commands.RegisterInfringem
         {
             try
             {
-                await _uow.BeginTransactionAsync();
 
                 var infringement = await _uow.InfringementRepository.FirstOrDefaultAsync(i => i.Id == request.InfringementId);
                 if (infringement == null)
@@ -56,12 +55,10 @@ namespace IS_prueba_tecnica.Application.Infringements.Commands.RegisterInfringem
                 await _uow.InfringementVehicleDriverRepository.AddAsync(entity);
                 await _uow.SaveChangesAsync();
 
-                _uow.CommitTransaction();
                 return infringement.Points;
             }
             catch
             {
-                _uow.RollbackTransaction();
                 throw;
             }
         }
