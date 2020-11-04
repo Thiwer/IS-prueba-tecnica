@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>IS_prueba_tecnica.Application</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

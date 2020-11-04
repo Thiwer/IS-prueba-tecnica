@@ -13,9 +13,9 @@ namespace IS_prueba_tecnica.Infrastructure.Persistence
     {
         private readonly IDateTime _dateTime;
 
-
         public DbSet<Vehicle> Vehicles { get; set; }
-
+        public DbSet<Driver> Drivers { get; set; }
+        public DbSet<Infringement> Infringements { get; set; }
 
         public PruebaTecnicaDbContext(DbContextOptions options, IDateTime dateTime) : base(options)
         {

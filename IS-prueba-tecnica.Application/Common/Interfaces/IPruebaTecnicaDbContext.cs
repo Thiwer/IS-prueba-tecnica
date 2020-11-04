@@ -10,6 +10,8 @@ namespace IS_prueba_tecnica.Application.Common.Interfaces
     {
 
         DbSet<Vehicle> Vehicles { get; set; }
+        DbSet<Driver> Drivers { get; set; }
+        public DbSet<Infringement> Infringements { get; set; }
 
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
         DbSet<TEntity> Set<TEntity>() where TEntity : class;
