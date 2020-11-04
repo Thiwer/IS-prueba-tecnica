@@ -1,4 +1,6 @@
 ﻿using IS_prueba_tecnica.Application.Common.Exceptions;
+using IS_prueba_tecnica.Application.Infringements.Commands.RegisterInfringement;
+using IS_prueba_tecnica.Application.Vehicles.Commands.CreateVehicle;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -33,11 +35,11 @@ namespace IS_prueba_tecnica.Controllers
             }
             catch (DriverNotExistsException)
             {
-                return BadRequest($"The driver with DNI '{request.DNI}' does not exists.");
+                return BadRequest($"The driver with DNI '{request.Dni}' does not exists.");
             }
             catch (VehiclesLimitException)
             {
-                return BadRequest($"The driver with DNI '{request.DNI}' cannot have more vehicles");
+                return BadRequest($"The driver with DNI '{request.Dni}' cannot have more vehicles");
             }
             catch (Exception ex)
             {
