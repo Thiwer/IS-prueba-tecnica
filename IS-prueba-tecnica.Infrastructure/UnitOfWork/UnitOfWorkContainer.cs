@@ -19,6 +19,8 @@ namespace IS_prueba_tecnica.Infrastructure.UnitOfWork
         public IVehicleRepository VehicleRepository { get; }
         public IDriverRepository DriverRepository { get; }
         public IInfringementRepository InfringementRepository { get; }
+        public IVehicleDriverRepository VehicleDriverRepository { get; }
+        public IInfringementVehicleDriverRepository InfringementVehicleDriverRepository { get; }
 
         public UnitOfWorkContainer(PruebaTecnicaDbContext context)
         {
@@ -27,6 +29,8 @@ namespace IS_prueba_tecnica.Infrastructure.UnitOfWork
             VehicleRepository = new VehicleRepository(context);
             DriverRepository = new DriverRepository(context);
             InfringementRepository = new InfringementRepository(context);
+            VehicleDriverRepository = new VehicleDriverRepository(context);
+            InfringementVehicleDriverRepository = new InfringementVehicleDriverRepository(context);
         }
 
         public void DetectChanges()

@@ -1,14 +1,21 @@
-﻿using Newtonsoft.Json;
+﻿using MediatR;
+using Newtonsoft.Json;
 
 namespace IS_prueba_tecnica.Application.Vehicles.Commands.CreateVehicle
 {
-    public class CreateVehicleCommand
+    public class CreateVehicleCommand :IRequest<string>
     {
 
         [JsonProperty("matricula")]
         public string Matricula { get; set; }
 
+        [JsonProperty("marca")]
+        public string Brand { get; set; }
+
+        [JsonProperty("model")]
+        public string Model { get; set; }
+
         [JsonProperty("dni")]
-        public int Dni { get; set; }
+        public string Dni{ get; set; }
     }
 }
